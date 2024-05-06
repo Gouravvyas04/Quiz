@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+}
+
+.container{
+    width: 100%;
+    margin-top: 150px;
+    
+}
+
+.content{
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    height: 45vh;
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px 10px rgb(192, 189, 189);
+}
+
+.score{
+    padding-left: 20%;
+}
+
+.timer{
+    padding-left: 25%;
+}
+
+.ques-content{
+    width: 95%;
+    height: 100px;
+    font-size: 25px;
+    padding-top: 25px;
+    border: 2px solid black;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.options{
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+#btn{
+    width: 90%;
+    height: 30px;
+    padding: 4px;
+}
+
+.explanation{
+    margin-top: 12px;
+}
+
+.other-options{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#other-btn{
+    min-width:12%;
+    height: 35px;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px;
+    background-color: rgb(61, 153, 156);
+    border: none;
+    border-radius: 2px;
+    color: white;
+}
+
+#other-btn:hover{
+    background-color: rgb(20, 120, 123);
+}
+
+button{
+    cursor: pointer;
+}
+
+.correct{
+    background-color: rgb(178, 252, 68);
+}
+
+.incorrect{
+    background-color: rgb(255, 140, 157);
+}
