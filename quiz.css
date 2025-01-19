@@ -1,92 +1,155 @@
-*{
+/* Reset default margin, padding, and box-sizing */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: grey;
-}
-
-.container{
-    width: 100%;
-    margin-top: 150px;
-    
-}
-
-.content{
-    max-width: 450px;
-    margin: 0 auto;
-    text-align: center;
-    height: 45vh;
-    border: 2px solid black;
-    box-shadow: 10px 10px 10px 10px rgb(192, 189, 189);
-}
-
-.score{
-    padding-left: 20%;
-}
-
-.timer{
-    padding-left: 25%;
-}
-
-.ques-content{
-    width: 95%;
-    height: 100px;
-    font-size: 25px;
-    padding-top: 25px;
-    border: 2px solid black;
-    margin-left: 10px;
-    margin-top: 8px;
-}
-
-.options{
-    margin-top: 40px;
-    font-size: 30px;
-}
-
-#btn{
-    width: 90%;
-    height: 30px;
-    padding: 4px;
-}
-
-.explanation{
-    margin-top: 12px;
-}
-
-.other-options{
+/* Body styling */
+body {
+    background-color: #f0f0f0; /* Soft grey background */
+    font-family: Arial, sans-serif; /* Added font family for consistency */
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    align-items: center;
+    height: 100vh; /* Ensures content is vertically centered */
+}
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 800px; /* Added max-width for better control */
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Content box styling */
+.content {
+    background-color: white; /* White background for content */
+    border: 2px solid #ddd; /* Lighter border for better contrast */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 10px; /* Rounded corners for better aesthetics */
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Score section */
+.score {
+    padding-left: 20px;
+}
+
+/* Timer section */
+.timer {
+    padding-left: 20px;
+}
+
+/* Question content box */
+.ques-content {
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    padding: 15px;
+    border: 2px solid #ccc; /* Lighter border */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px; /* Rounded corners for question box */
+    background-color: #fafafa; /* Light background color */
+    word-wrap: break-word;
+}
+
+/* Options section */
+.options {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Button styling */
+#btn {
+    width: 90%;
+    height: 45px;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Explanation section */
+.explanation {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Other options container */
+.other-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
     width: 100%;
 }
 
-#other-btn{
-    min-width:12%;
-    height: 35px;
-    font-size: 15px;
+/* Other buttons */
+#other-btn {
+    min-width: 120px;
+    height: 45px;
+    font-size: 16px;
     font-weight: 500;
     margin: 10px;
     background-color: rgb(61, 153, 156);
     border: none;
-    border-radius: 2px;
+    border-radius: 5px;
     color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#other-btn:hover{
+#other-btn:hover {
     background-color: rgb(20, 120, 123);
 }
 
-button{
-    cursor: pointer;
-}
-
-.correct{
+/* Button styles for correct and incorrect answers */
+.correct {
     background-color: rgb(178, 252, 68);
 }
 
-.incorrect{
+.incorrect {
     background-color: rgb(255, 140, 157);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .content {
+        padding: 15px;
+    }
+
+    .ques-content {
+        font-size: 18px;
+    }
+
+    .options {
+        font-size: 20px;
+    }
+
+    #btn {
+        width: 100%;
+        height: 50px;
+    }
+
+    #other-btn {
+        min-width: 100px;
+        font-size: 14px;
+    }
 }
