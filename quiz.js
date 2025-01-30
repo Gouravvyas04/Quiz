@@ -11,7 +11,7 @@ let points = document.querySelector(".points");
 let count = 10;
 let score = 0;
 let quesIndex = 0;
-let interval; // Variable to store interval for timer
+let interval; // Store timer interval
 
 points.innerText = score;
 
@@ -47,7 +47,7 @@ const questions = [
 
 // Function to start timer
 function startTimer() {
-  clearInterval(interval); // Clear previous timer
+  clearInterval(interval); // Clear any previous timer
   count = 10;
   timer.innerText = count;
   
@@ -80,6 +80,7 @@ function enableButtons() {
 function loadQuestion() {
   question.innerText = questions[quesIndex].statement;
   explanation.innerText = ""; // Clear previous explanation
+  explanation.style.display = "none"; // Hide explanation
   startTimer();
   enableButtons();
 }
@@ -114,6 +115,7 @@ right.addEventListener("click", () => {
   points.innerText = score;
   disableButtons();
   explanation.innerText = questions[quesIndex].explanation;
+  explanation.style.display = "block"; // Show explanation
 });
 
 // Handle Incorrect Answer
@@ -127,6 +129,7 @@ wrong.addEventListener("click", () => {
   points.innerText = score;
   disableButtons();
   explanation.innerText = questions[quesIndex].explanation;
+  explanation.style.display = "block"; // Show explanation
 });
 
 // Event Listeners for Navigation
